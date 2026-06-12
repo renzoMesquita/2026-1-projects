@@ -39,6 +39,7 @@ def opcao_invalida():
     main()
 
 def cadastrar_novo_restaurante():
+    pass
         
 def main():
     os.system('clear')
