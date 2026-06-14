@@ -11,7 +11,7 @@ def exibir_nome_do_programa():
 def exibir_opcoes():
     print('1. Cadastrar Restaurante')
     print('2. Listar Restaurante')
-    print('3. Ativar Restaurante')
+    print('3. Ativar/Desativar Restaurante')
     print('4. Sair\n')
 
 def exibir_subtitulo(texto):
@@ -63,6 +63,9 @@ def ativar_desativar():
                 print(f'Restaurante {nome_restaurante} está ativado!')
             else:
                 print(f'Restaurante {nome_restaurante} está desativado!')
+    if restaurante_encontrado == False:
+        print('Restaurante não encontrado!')
+    voltar_ao_menu()
 
 def escolher_opcao():
     try: 
