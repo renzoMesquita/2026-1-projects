@@ -1,6 +1,7 @@
 import os
 
-restaurantes = ['Pizza', 'Cenoura']
+restaurantes = [{'nome' : 'Matuto', 'categoria' : 'Churrasco', 'ativo' : False},
+                {'nome' : 'Satoshi', 'categoria' : 'Japonês', 'ativo' : False}]
 
 def exibir_nome_do_programa():
     print('''
@@ -39,7 +40,7 @@ def cadastrar_novo_restaurante():
 def listar_restaurantes():
     exibir_subtitulo('Restaurantes: ')
     for x in restaurantes:
-        print(f'.{x}')
+        print(f'.{x['nome']}')
     voltar_ao_menu()
 
 def escolher_opcao():
