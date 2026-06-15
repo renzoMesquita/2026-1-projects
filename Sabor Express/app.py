@@ -44,6 +44,8 @@ def cadastrar_novo_restaurante():
 
 def listar_restaurantes():
     exibir_subtitulo('Restaurantes: ')
+    print(f'{'Nome do Restaurante'.ljust(22)}  {'Categoria'.ljust(22)}  {'Status'}')
+    print('\n')
     for x in restaurantes:
         nome_restaurante = x['nome']
         categoria_restaurante = x['categoria']
