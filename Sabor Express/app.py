@@ -16,7 +16,10 @@ def exibir_opcoes():
 
 def exibir_subtitulo(texto):
     os.system('clear')
+    linha = '*' * len(texto)
+    print(linha)
     print(texto)
+    print(linha)
     print()
 
 def encerrar():
@@ -48,7 +51,7 @@ def listar_restaurantes():
             restaurante_ativo = 'Restaurante Ativo'
         else:
             restaurante_ativo = 'Restaurante Desativado'
-        print(f'.{nome_restaurante} | {categoria_restaurante} | {restaurante_ativo}')
+        print(f'.{nome_restaurante.ljust(20)} | {categoria_restaurante.ljust(20)} | {restaurante_ativo}')
     voltar_ao_menu()
 
 def ativar_desativar():
