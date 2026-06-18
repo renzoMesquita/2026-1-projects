@@ -1,18 +1,29 @@
 console.log("JS funcionando!!")
 
 let gamePattern = []
+let userClickedPattern = []
 let randomNumber
 
-const buttonColour = ["red", "blue", "green", "yellow"]
+const buttonColor = ["red", "blue", "green", "yellow"]
 
 function nextSequence(){
     randomNumber = Math.floor(Math.random()*4)
-    let randomChosenColour = buttonColour[randomNumber]
-    gamePattern.push(randomChosenColour)
-    $("#" + randomChosenColour).addClass("pressed")
+    let randomChosenColor = buttonColor[randomNumber]
+    gamePattern.push(randomChosenColor)
+
+    let audio = new Audio("sounds/" + randomChosenColor + ".mp3")
+    audio.play()
+
+    $("#" + randomChosenColor).addClass("pressed")
     setTimeout(function(){
-        $("#" + randomChosenColour).removeClass("pressed")
+        $("#" + randomChosenColor).removeClass("pressed")
     }, 100)
 }
+
+$(".btn").click(function() {
+    let userChosenColor = $(this).attr("id")
+    userClickedPattern.push(userChosenColor)
+    console.log(userClickedPattern)
+})
 
 
