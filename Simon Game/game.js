@@ -1,5 +1,3 @@
-console.log("JS funcionando!!")
-
 let gamePattern = []
 let userClickedPattern = []
 let randomNumber
@@ -24,6 +22,7 @@ $(".btn").click(function() {
     let userChosenColor = $(this).attr("id")
     userClickedPattern.push(userChosenColor)
     console.log(userClickedPattern)
+    nextSequence()
 })
 
 
